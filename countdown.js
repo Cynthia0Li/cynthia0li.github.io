@@ -93,10 +93,12 @@ function updateBalls(){
 }
 
 function getCurrentTimeSeconds(){
-  var curTime = new Date();
+  /*var curTime = new Date();
   var ret = endTime.getTime() - curTime.getTime();
   ret = Math.round(ret/1000);
-  return ret>=0 ? ret : 0;
+  return ret>=0 ? ret : 0;*/
+  var curTime = new Date();
+  return curTime.getHours()*3600+curTime.getMinutes()*60+curTime.getSeconds();
 }
 
 function render(cxt){  
