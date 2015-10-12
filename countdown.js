@@ -90,6 +90,15 @@ function updateBalls(){
       balls[i].y = HEIGHT-RADIUS;
     }
   }
+  var curNum = 0;
+    for(var i=0; i<balls.length; i++){
+      if(balls[i].x<WIDTH+RADIUS && balls[i].x>-RADIUS){
+        balls[curNum++] = balls[i];
+      }      
+    }
+    while(balls.length > Math.min(curNum, 300)){
+        balls.pop();
+  }
 }
 
 function getCurrentTimeSeconds(){
