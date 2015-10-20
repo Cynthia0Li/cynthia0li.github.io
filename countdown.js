@@ -151,9 +151,14 @@ function renderDigit(x, y, num, cxt){
   for(var i=0; i<digit[num].length; i++){
     for(var j=0; j<digit[num][i].length; j++){
       if(digit[num][i][j] == 1){
-        cxt.beginPath();
-        cxt.arc(x+j*2*(RADIUS+2)+(RADIUS+2), y+i*2*(RADIUS+2)+(RADIUS+2), RADIUS, 0, 2*Math.PI);
-        cxt.closePath();
+        //cxt.beginPath();
+        //cxt.arc(x+j*2*(RADIUS+2)+(RADIUS+2), y+i*2*(RADIUS+2)+(RADIUS+2), RADIUS, 0, 2*Math.PI);
+        //cxt.closePath();
+        var radial = cxt.createRadialGradient(x+j*2*(RADIUS+2)+(RADIUS+2),y+i*2*(RADIUS+2)+(RADIUS+2),0,x+j*2*(RADIUS+2)+(RADIUS+2),y+i*2*(RADIUS+2)+(RADIUS+2),RADIUS); //重合的圆心坐标 
+        radial.addColorStop(0,'#fff'); 
+        radial.addColorStop(0.5,'#ff0'); 
+        radial.addColorStop(0.9,'#555'); 
+        radial.addColorStop(1,'#f00'); 
         cxt.fill();
       }
     }
