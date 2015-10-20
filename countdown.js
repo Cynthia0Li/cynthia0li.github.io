@@ -159,6 +159,7 @@ function renderDigit(x, y, num, cxt){
         radial.addColorStop(0.5,'#ff0'); 
         radial.addColorStop(0.9,'#555'); 
         radial.addColorStop(1,'#f00'); 
+        cxt.fillStyle = radial;
         cxt.fill();
       }
     }
