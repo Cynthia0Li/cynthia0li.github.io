@@ -1733,7 +1733,7 @@ window.__require = function e(t, n, o) {
                 a = null == a || void 0 == a || e, console.log("LoadBoolBeforeLoadS", a), this.needShow = !1, a && a ? (this.needShow = !0, showMyAds()) : this.needShow = !1, this.needShow ? (void 0 == preloader && this.startGoToGame(n, o, c), resCompleteFlag = !0, adCompleteFlag && resCompleteFlag && this.startGoToGame(n, o, c)) : this.startGoToGame(n, o, c)
             },
             startGoToGame: function(e, t, n) {
-                console.log("goToScene"), noAdGoToScene()
+                // console.log("goToScene"), noAdGoToScene()
             }
         };
         t.exports = o, cc._RF.pop()
